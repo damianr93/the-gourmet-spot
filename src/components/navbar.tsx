@@ -1,5 +1,6 @@
-import { AppBar, Button, Grid, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import { MenuOutlined } from '@mui/icons-material';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar = () => {
     return (
@@ -19,7 +20,7 @@ export const NavBar = () => {
                     edge="start"
                     sx={{
                         mr: 2,
-                        display: 'none', // Ocultar siempre el icono de menú
+                        display: 'none',
                     }}
                 >
                     <MenuOutlined />
@@ -32,7 +33,7 @@ export const NavBar = () => {
                         component='div'
                         sx={{
                             color: 'black',
-                            display: { xs: 'none', sm: 'block' } // Ocultar en pantallas pequeñas
+                            display: { xs: 'none', sm: 'block' } 
                         }}
                     >
                         <b>The Gourmet Spot</b>
@@ -40,11 +41,25 @@ export const NavBar = () => {
                     <Grid item
                         sx={{
                             color: 'black',
+                            display: 'flex',
+                            gap: '20px' 
                         }}
                     >
-                        <Button color="inherit"><b>Welcome</b></Button>
-                        <Button color="inherit"><b>Catálogo</b></Button>
-                        <Button color="inherit"><b>Contácto</b></Button>
+                        <NavLink
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                            to="/"
+                        ><b>Welcome</b>
+                        </NavLink>
+                        <NavLink
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                            to="/products"
+                        ><b>Products</b>
+                        </NavLink>
+                        <NavLink
+                            style={{ color: 'inherit', textDecoration: 'none' }}
+                            to="/contactus"
+                        ><b>Contact Us</b>
+                        </NavLink>
                     </Grid>
                 </Grid>
             </Toolbar>

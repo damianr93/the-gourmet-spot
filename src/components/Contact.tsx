@@ -2,31 +2,6 @@ import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { TextField, Button, Typography, Container, Grid, Box } from '@mui/material';
 import styled from 'styled-components';
 
-const StyledContainer = styled(Container)`
-  display: flex;
-  margin-top: 45px;
-  align-items: start;
-  justify-content: space-between;
-  gap: 16px;
-  height: 100vh; 
-
-  @media (max-width: 960px) {
-    flex-direction: column;
-    justify-content: center;
-  }
-`;
-
-const StyledFormBox = styled(Box)`
-  flex: 1;
-  max-width: 400px; 
-  margin-right: auto; 
-  margin-top: 16px; 
-
-  @media (max-width: 960px) {
-    margin-right: 0;
-    margin-top: 0;
-  }
-`;
 
 interface FormData {
   name: string;
@@ -57,7 +32,7 @@ const ContactUs: React.FC = () => {
   };
 
   return (
-    <StyledContainer maxWidth="lg">
+    <StyledContainer maxWidth="lg" className='animate__animated animate__backInUp'>
       <StyledFormBox>
         <Typography variant="h4" gutterBottom sx={{ color: '#000' }}>
           Contáctenos
@@ -113,3 +88,29 @@ const ContactUs: React.FC = () => {
 };
 
 export default ContactUs;
+
+const StyledContainer = styled(Container)`
+  display: flex;
+  margin-top: 45px;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  height: 80vh; 
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
+const StyledFormBox = styled(Box)`
+  flex: 1;
+  max-width: 400px; 
+  margin-right: auto; 
+  margin-top: 16px; 
+
+  @media (max-width: 960px) {
+    margin-right: 0;
+    margin-top: 0;
+  }
+`;

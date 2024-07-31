@@ -3,7 +3,7 @@ import 'animate.css';
 import { Button } from "@mui/material";
 
 export const WelcomeSection = () => (
-  <Container>
+  <Container className="animate__backOutLeft">
     <WelcomeContainer className="animate__animated animate__backInLeft">
       <h1>THE GOURMET SPOT, TU MEJOR OPCIÓN GASTRONÓMICA, SIEMPRE!</h1>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis quidem quis rerum tenetur dicta reprehenderit, officia quam soluta aspernatur dolores provident non molestias, ipsa nisi libero nulla, nostrum culpa excepturi.</p>
