@@ -1,12 +1,9 @@
-import { NavBar } from "../components/navbar"
-import { WelcomeSection } from "../components/WelcomeSection"
-
+import { PageLayout } from "../layouts/PageLayout";
 
 export const TheGourmetSpot = () => {
   return (
     <>
-    <NavBar/>
-    <WelcomeSection/>
+      <PageLayout />
     </>
-  )
-}
+  );
+};
